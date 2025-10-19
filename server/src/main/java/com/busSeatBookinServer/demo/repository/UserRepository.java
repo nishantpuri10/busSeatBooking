@@ -7,7 +7,9 @@ import java.util.Optional;
 
 
 
-public interface UserRepository extends JpaRepository<User,Long>{
+// In 'JpaRepository<User, Long>', 'User' is the entity class that this repository manages,
+// and 'Long' is the type of the entity's primary key (id).
+public interface UserRepository extends JpaRepository<User, Long> {
 
     ///to get user by email
     Optional<User>  findByEmail(String email);
